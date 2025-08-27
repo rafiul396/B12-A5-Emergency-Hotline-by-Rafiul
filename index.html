@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tailwind CDN and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700  display=swap"
+        rel="stylesheet">
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav class="w-full px-8 py-2 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img class="w-14" src="./assets/logo.png" alt="logo">
+                <span class="font-bold text-[#006747] text-xl mx-2" style="font-family: 'Hind Madurai', sans-serif;">
+                    Emergency <br>
+                    Service
+                </span>
+            </a>
+            <ul>
+                <button class="btn rounded-full px-8 bg-[#41FF6B10] border-0">
+                    <span id="hearts" style="font-family: 'Hind Madurai', sans-serif;">
+                        0
+                    </span>
+                    <img class="w-5" src="./assets/heart.png" alt="">
+                </button>
+                <button class="btn rounded-full px-8 m-5 bg-[#41FF6B10] border-0">
+                    <span id="coins" style="font-family: 'Hind Madurai', sans-serif;">
+                        100
+                    </span>
+                    <img class="w-5" src="./assets/coin.png" alt="">
+                </button>
+                <button class="btn rounded-full px-8 bg-[#00A63E] text-[#ffffff] border-0"
+                    style="font-family: 'Hind Madurai', sans-serif;">
+                    <span>
+                        0
+                    </span>
+                    Copy
+                </button>
+            </ul>
+        </nav>
+        <section class="hero-sec text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] py-4">
+            <img class="mx-auto w-20" src="./assets/logo-dark.png" alt="">
+            <h1 class="font-semibold text-3xl text-[#ffffff] my-3">
+                Emergency Service Directory
+            </h1>
+            <p class="text-[#ffffff] font-medium text-base">
+                Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of
+                Bangladesh
+            </p>
+        </section>
+    </header>
+</body>
+
+</html>
