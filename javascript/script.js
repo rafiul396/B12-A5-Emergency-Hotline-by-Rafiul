@@ -1,37 +1,37 @@
 // writting programming on heart icon
-function increaseHeart(id){
+function increaseHeartCopy(id){
     const heart = document.getElementById(id);
     const heartInnerText = parseInt(heart.innerText);     
     total = heartInnerText + 1;
-    const finalValue = heart.innerText = total;
+    heart.innerText = total;
 }
     
 document.getElementById("national-help").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("police").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("fire").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("ambulance").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("w&c-helpline").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("anti-c-helpline").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("electricity").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("brac").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 document.getElementById("railway").addEventListener("click", function(e){
-    increaseHeart("hearts")
+    increaseHeartCopy("hearts")
 });
 
 // writting programming for call buttons
@@ -39,34 +39,37 @@ function creatingHistoryElement(names, numbers) {
     // Time
     const clockTime = new Date();
     let hour = clockTime.getHours();
-    if(hour === 13){
-        hour = "01";
-    }else if(hour === 14) {
-        hour = "02";
-    }else if(hour === 15) {
-        hour = "03";
-    }else if(hour === 16) {
-        hour = "04";
-    }else if(hour === 17) {
-        hour = "05";
-    }else if(hour === 18) {
-        hour = "06";
-    }else if(hour === 19) {
-        hour = "07";
-    }else if(hour === 20) {
-        hour = "08";
-    }else if(hour === 21) {
-        hour = "09";
-    }else if(hour === 22) {
-        hour = "10";
-    }else if(hour === 23) {
-        hour = "11";
-    }else if(hour == "00") {
-        hour = "12";
-    }
+    // if(hour === 13){
+    //     hour = "01";
+    // }else if(hour === 14) {
+    //     hour = "02";
+    // }else if(hour === 15) {
+    //     hour = "03";
+    // }else if(hour === 16) {
+    //     hour = "04";
+    // }else if(hour === 17) {
+    //     hour = "05";
+    // }else if(hour === 18) {
+    //     hour = "06";
+    // }else if(hour === 19) {
+    //     hour = "07";
+    // }else if(hour === 20) {
+    //     hour = "08";
+    // }else if(hour === 21) {
+    //     hour = "09";
+    // }else if(hour === 22) {
+    //     hour = "10";
+    // }else if(hour === 23) {
+    //     hour = "11";
+    // }else if(hour == "00") {
+    //     hour = "12";
+    // }
     
     const minute = clockTime.getMinutes();
-    const second = clockTime.getSeconds();
+    let second = clockTime.getSeconds();
+    if(second < 10){
+        second = "0" + second;
+    }
     const times = hour + ":" + minute + ":" + second;
 
     const history = document.getElementById("history-box");
@@ -90,13 +93,13 @@ function callingBtn(names, numbers) {
     const coinsValue = coins.innerText;
     let convertedCoins = parseInt(coinsValue);
     if(convertedCoins >= 20){
-        alert("Calling " + getServiceName + " Service " + getServiceNumber);
+        alert("📞Calling " + getServiceName + " Service " + getServiceNumber);
         convertedCoins = convertedCoins - 20;
         coins.innerText = convertedCoins;
         coins.innerText = convertedCoins;
         creatingHistoryElement(names, numbers);
     }else {
-        alert("আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০টি কয়েন লাগবে।");
+        alert("❌আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০টি কয়েন লাগবে।");
     }
 };
 
@@ -135,3 +138,47 @@ document.getElementById("clear-btn").addEventListener("click", function() {
     const getHistory = document.getElementById("history-box");
     getHistory.replaceChildren();
 })
+
+// writing programming for copy button
+function copyNumber(number) {
+    const num = document.getElementById(number).textContent;
+    navigator.clipboard.writeText(num);
+    alert("নম্বর কপি হয়েছে " + num)
+}
+
+document.getElementById("copy-btn1").addEventListener("click", function() {
+    copyNumber("national-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn2").addEventListener("click", function() {
+    copyNumber("police-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn3").addEventListener("click", function() {
+    copyNumber("fire-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn4").addEventListener("click", function() {
+    copyNumber("ambulance-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn5").addEventListener("click", function() {
+    copyNumber("helpline1-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn6").addEventListener("click", function() {
+    copyNumber("helpline2-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn7").addEventListener("click", function() {
+    copyNumber("electricity-number");
+    increaseHeartCopy("copy");
+});
+document.getElementById("copy-btn8").addEventListener("click", function() {
+    copyNumber("brac-number");
+    increaseHeartCopy("copy")
+});
+document.getElementById("copy-btn9").addEventListener("click", function() {
+    copyNumber("railway-number");
+    increaseHeartCopy("copy");
+});

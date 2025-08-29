@@ -1,165 +1,84 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
-
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
 ### 6. Answer the following questions clearly:
 
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**? <br>
+    Ans: Basically, getElementById, getElementsByClassName, querySelector, and querySelectorAll are JavaScript methods used to select and retrieve HTML elements from the Document Object Model (DOM). The differences between them are given below:-
+    1. **getElementById** : By using this methos we can select a HTML element using its unique id. We can select only single HTML element from DOM using that Javascript method. But It must have a unique id.
+
+    2. **getElementsByClassName** : We are known about class in CSS. We can use a specific class in multiple HTML elements. By using this method we can select all of them with that class name. It returns a HTMLCollection.
+
+    3. **querySelector** : This method used to select a first element that matches a given CSS selector. We can target any element by targeting its l id-name, class-name also tag name. If we use a single class name in a several element. From these elements That method select only first element.
+
+    4. **querySelectorAll** : It select all elements that matches a given CSS selector or tag name. Basically it returns a static NodeList.**
+
 2. How do you **create and insert a new element into the DOM**?
+    We can create a new element by using createElement() method in Javascipt file. Then we insert this element in DOM to use appendChild() method. Now I am showing what does it looks like:-
+    ```<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Creating Element</title>
+        </head>
+        <body>
+            
+            <script>
+                const title = document.createElement("h3");
+                title.innerText = "Hello Pragramming Hero";
+                document.body.appendChild(title);
+            </script>
+        </body>
+        </html>
+    ```
 3. What is **Event Bubbling** and how does it work?
+    Ans: Event bubbling is a method of the DOM where an event on an element first works on that element and then progressively travels up through its parent elements to the root of the DOM. It flows from the bottom up like a bubble, which is why it's called **Event Bubbling.**
+
+    Now I am showing how its work:-
+    ```
+                <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Creating Element</title>
+        </head>
+        <body>
+            <div id="order-list">
+                <ol id="list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li id="js">Javascript</li>
+                    <li id="MongoDB">MongoDB</li>
+                </ol>
+            </div>
+            <script>
+                document.getElementById("order-list").addEventListener("click", function() {
+                    console.log("Main Container")
+                })
+                document.getElementById("list").addEventListener("click", function() {
+                    console.log("hello list")
+                })
+                document.getElementById("js").addEventListener("click", function() {
+                    console.log("hello JS")
+                })
+                document.getElementById("MongoDB").addEventListener("click", function() {
+                    console.log("Hello MongoDB")
+                })
+            </script>
+        </body>
+        </html>
+    ```
+    **Output**
+    1. HTML
+    2. CSS
+    3. Javascript
+    4. MongoDB
+
+    When I click on the MongoBD in list, the click event happens on that box first then, the event "travels up" to the parent of this list which is ol tag.And the event happens there too. Finally, the event "travels up" to the ol's parent which is a div (class name 'order-list') then the event happens there as well.
+    The event starts at the element you clicked and then "bubbles up" through all of its parent elements, one by one, all the way to the very top. This is how event bubbling work. 
+
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+    Event delegation is a feature of JavaScript that use event bubbling system to handle events for multiple child element with a single event listener attached to their parent. Instead of adding event listener all of element, you put just a single event listener on the parent element. When someone shoot an event like a click on a child, it bubbles up to the parent and the parent's listener receives it. The listener of the parent use event.target method to identify which specific child element was clicked. It's called **Event Delegation**.
+
+    It is **useful** to use because by adding a single event listener, we can fired several element. So performance will increase. It makes a element dynamic by writing short code and It reduces the amount of code needed, making it easier to read and maintain.
+    
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯

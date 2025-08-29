@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element</title>
+</head>
+<body>
+    <div id="order-list">
+        <ol id="list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li id="js">Javascript</li>
+            <li id="MongoDB">MongoDB</li>
+        </ol>
+    </div>
+    <script>
+        document.getElementById("order-list").addEventListener("click", function() {
+            console.log("Main Container")
+        })
+        document.getElementById("list").addEventListener("click", function() {
+            console.log("hello list")
+        })
+        document.getElementById("js").addEventListener("click", function() {
+            console.log("hello JS")
+        })
+        document.getElementById("MongoDB").addEventListener("click", function() {
+            console.log("Hello MongoDB")
+        })
+    </script>
+</body>
+</html>
