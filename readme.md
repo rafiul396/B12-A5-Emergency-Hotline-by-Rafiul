@@ -82,7 +82,7 @@
     It is **useful** to use because by adding a single event listener, we can fired several element. So performance will increase. It makes a element dynamic by writing short code and It reduces the amount of code needed, making it easier to read and maintain.
 
 5. What is the difference between **preventDefault() and stopPropagation()** methods? <br>
-    The difference is that
+    The difference is that <br>
     **preventDefault()** stops the browser's default action for an event, like a link navigating to a new page or a form submitting.
 
     stopPropagation() stops an event from bubbling up the DOM tree, preventing it from affecting parent elements with their own event handlers.
