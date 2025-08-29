@@ -93,7 +93,7 @@ function callingBtn(names, numbers) {
     const coinsValue = coins.innerText;
     let convertedCoins = parseInt(coinsValue);
     if(convertedCoins >= 20){
-        alert("📞Calling " + getServiceName + " Service " + getServiceNumber);
+        alert("📞Calling " + getServiceName + " " + getServiceNumber);
         convertedCoins = convertedCoins - 20;
         coins.innerText = convertedCoins;
         coins.innerText = convertedCoins;
